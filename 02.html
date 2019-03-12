@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>DOM对象转化成jQuery对象</title>
+  <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+</head>
+
+<body>
+  <div>元素一</div>
+  <div>元素二</div>
+  <div>元素三</div>
+
+  <script type="text/javascript">
+    var div = document.getElementsByTagName('div'); //dom对象,选择了所有的div标签。
+    var divAll = document.querySelectorAll('div');  //等价于上面；
+    var divFirst = document.querySelector('div'); // 仅仅返回匹配元素的第一个元素
+
+    //将dom节点div转化为$div的jquery对象
+    $div =  $(div)
+
+    var $first = $div.first(); //找到第一个div元素
+    $first.css('color', 'red'); //给第一个元素设置颜色
+    console.log('这是所有的div'+divAll);
+    console.log('这是第一个div'+divFirst);
+
+  </script>
+
+</body>
+
+</html>

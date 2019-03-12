@@ -9,7 +9,11 @@
   <title>选择器</title>
   <script type="text/javascript">
     $(document).ready(function () {
-      $('div>h2').text('hello, world!'); //html()函数在
+      $('div>h2').html().text('hello, world!');
+      /* html()获取元素的html文本；
+      html('这里直接填写html内容（不仅是文本内容）')
+      html(function(){})通过函数生产内容
+      注意：获取html内容可能造成安全风险！ */
     })
   </script>
 </head>
