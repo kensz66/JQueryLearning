@@ -37,3 +37,4 @@ git branch -a
 
 合并分支
 git merge 分支名    //将分支名合并到当前分支
+git branch -a
