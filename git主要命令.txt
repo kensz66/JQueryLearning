@@ -17,3 +17,5 @@ git pull --rebase origin master
 本地库内容推送到远程库
 git push -u origin master
 
+状态查询
+git status
