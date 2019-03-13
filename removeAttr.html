@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>removeAttr()</title>
+  <script src="//code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+  <button>Enable</button>
+  <input type="text" title="hello there" />
+  <div id="log"></div>
+
+  <script>
+    (function () {
+      var inputTitle = $("input").attr("title");
+      console.log(inputTitle);
+      $("button").click(function () {
+        var $input = $(this).next();
+        if($input instanceof jQuery){   //判断一个对象是否为jQuery对象
+        console.log($input);
+        }
+
+        if ($input.attr("title") == inputTitle) {
+          $input.removeAttr("title")
+        } else {
+          $input.attr("title", inputTitle);
+        }
+
+        $("#log").html("input title is now " + $input.attr("title"));
+      });
+    })();
+  </script>
+
+</body>
+
+</html>

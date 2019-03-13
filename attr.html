@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+  <title>attr()</title>
+</head>
+
+<body>
+  <div>
+    <img id="greatphoto" src="brush-seller.jpg" alt="brush seller" />
+  </div>
+  <script type="text/javascript">
+    var id = $('#greatphoto').attr('id'); //获取id属性的值
+    console.log(id);
+
+    $('#greatphoto').attr('alt', 'Beijing Brush Seller'); //改变单个属性的值
+
+    $('#greatphoto').attr('title','photo by Kelly Clark'); //增加一个新的属性并赋值
+
+    //增加或更改多个属性，注意：class属性必须带引号
+    $('#greatphoto').attr({
+      alt: 'beijing 风光',
+      title:'北京风光',   //属性引号可选
+      'class': 'photo'  //class必须加引号
+    });
+
+    //通过匿名函数计算返回属性值,函数两个参数分别为选择的所有对象的数组的索引值和该索引值元素本属性的值
+    $('#greatphoto').attr('title', function(i,val){
+      var j=i+1;
+      return '第'+j+'个图：'+ val + ' -photo by Ken';
+    });
+  </script>
+
+
+
+</body>
+
+</html>
