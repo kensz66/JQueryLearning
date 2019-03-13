@@ -43,6 +43,9 @@ git branch -a
 合并分支
 git merge 分支名    //将分支名合并到当前分支
 
+删除远程 origin/HEAD分支
+git remote set-head origin -d
+
 =======储藏文件列表====================
 
 把当前的工作储藏起来 等以后恢复现场后继续工作 stash为英文储藏的意思
