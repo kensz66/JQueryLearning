@@ -1,0 +1,19 @@
+本地代码库初始化
+git init
+
+添加文件到版本库
+git add 文件名
+git add .  //添加文件夹所有文件
+
+提交文件到本地库
+git commit -m '版本说明的内容(必填)'
+
+关联到远程库
+git remote add origin https://www.github.com/kensz66/demo.git
+
+获取远程库与本地库合并
+git pull --rebase origin master
+
+本地库内容推送到远程库
+git push -u origin master
+
