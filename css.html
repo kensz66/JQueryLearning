@@ -1,29 +1,81 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>css()</title>
   <style>
-div { width:60px; height:60px; margin:5px; float:left; }
+    div {
+      width: 60px;
+      height: 60px;
+      margin: 5px;
+      float: left;
+    }
   </style>
   <script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
+
 <body>
 
-<span id="result">&nbsp;</span>
-<div style="background-color:blue;"></div>
-<div style="background-color:rgb(15,99,30);"></div>
+  <span id="result">&nbsp;</span>
+  <div style="background-color:blue;"></div>
+  <div style="background-color:rgb(15,99,30);"></div>
 
-<div style="background-color:#123456;"></div>
-<div style="background-color:#f11;"></div>
-<script>
-$("div").click(function () {
-  var color = $(this).css("background-color"); //获取指定css属性的值
-  $("#result").html("That div is <span style='color:" +
-                     color + ";'>" + color + "</span>.");
-});
+  <div style="background-color:#123456;"></div>
+  <div style="background-color:#f11;"></div>
+  <script>
+    $("div").click(function () {
+      var color = $(this).css("background-color"); //获取指定css属性的值
+      $("#result").html("That div is <span style='color:" +
+        color + ";'>" + color + "</span>.");
+    });
+  </script>
 
-</script>
+
+
+
+
+  <p id="result1">&nbsp;</p>
+  <div id="box1">1</div>
+  <div id="box2">2</div>
+  <div id="box3">3</div>
+  <div id="box4">4</div>
+  <script>
+    $("div").click(function () {
+      var html = ["The clicked div has the following styles:"];
+
+      var styleProps = $(this).css(["width", "height", "color", "background-color"]); //获取一个数组
+      $.each(styleProps, function (prop, value) {
+        html.push(prop + ": " + value);
+      });
+
+      $("#result1").html(html.join("<br>"));
+    });
+
+
+    //设置宽度增加200
+    $("#box").one("click", function () {
+      $(this).css("width", "+=200");
+    });
+
+    //设置多个css属性
+    $("p").hover(function () {
+      $(this).css({
+        'background-color': 'yellow',
+        'font-weight': 'bolder'
+      });
+    }, function () {
+      var cssObj = {
+        'background-color': '#ddd',
+        'font-weight': '',
+        'color': 'rgb(0,40,244)'
+      };
+      $(this).css(cssObj);
+    });
+  </script>
+
+
+
 
 </body>
-</html>
 
+</html>
