@@ -16,7 +16,7 @@ div { width:60px; height:60px; margin:5px; float:left; }
 <div style="background-color:#f11;"></div>
 <script>
 $("div").click(function () {
-  var color = $(this).css("background-color");
+  var color = $(this).css("background-color"); //获取指定css属性的值
   $("#result").html("That div is <span style='color:" +
                      color + ";'>" + color + "</span>.");
 });
@@ -26,4 +26,3 @@ $("div").click(function () {
 </body>
 </html>
 
-Demo:
