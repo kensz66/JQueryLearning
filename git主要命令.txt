@@ -31,3 +31,9 @@ git branch -d 分支名
 
 删除远程分支
 git push origin --de 分支名
+
+查看所有分支情况
+git branch -a
+
+合并分支
+git merge 分支名    //将分支名合并到当前分支
