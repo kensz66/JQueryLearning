@@ -9,7 +9,7 @@ git add .  //添加文件夹所有文件
 git commit -m '版本说明的内容(必填)'
 
 关联到远程库
-git remote add origin https://www.github.com/kensz66/demo.git
+git remote add origin https://www.github.com/kensz66/JQueryLearning.git
 
 获取远程库与本地库合并
 git pull --rebase origin master
@@ -43,6 +43,7 @@ git stash
 
 查看所有隐藏的文件列表
 git stash list
+
 
 恢复被隐藏的文件,但是不删除内容
 git stash apply
