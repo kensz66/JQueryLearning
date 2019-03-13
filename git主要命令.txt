@@ -42,4 +42,4 @@ git merge 分支名    //将分支名合并到当前分支
 git stash
 
 查看所有隐藏的文件列表
-
+git stash list
