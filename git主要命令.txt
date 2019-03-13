@@ -19,3 +19,9 @@ git push -u origin master
 
 状态查询
 git status
+
+新建本地分支
+git branch 分支名
+
+切换到本地分支
+git checkout 分支名
