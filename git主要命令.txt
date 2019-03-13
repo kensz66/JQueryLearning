@@ -38,12 +38,17 @@ git branch -a
 合并分支
 git merge 分支名    //将分支名合并到当前分支
 
-把当前的工作隐藏起来 等以后恢复现场后继续工作 stash为英文隐藏的意思
+把当前的工作储藏起来 等以后恢复现场后继续工作 stash为英文储藏的意思
 git stash
 
-查看所有隐藏的文件列表
+查看所有储藏的文件列表
 git stash list
 
-
-恢复被隐藏的文件,但是不删除内容
+恢复被储藏的文件,但是不删除内容
 git stash apply
+
+删除储藏的文件
+git stash drop
+
+恢复储藏的文件,同时删除储藏的文件
+git stash pop
