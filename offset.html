@@ -1,0 +1,42 @@
+<html>
+
+<head>
+  <title>offset demo</title>
+  <style>
+    div {
+      /* margin-left: 10px; */
+      /* display: block; */
+      width: 200px;
+      height: 20px;
+      border: 1px solid;
+      box-sizing: border-box;
+    }
+    .first-div {
+      height:2000px;
+    }
+  </style>
+  <script src="//code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+  <div class="first-div">Hello</div>
+  <div>2nd Paragraph</div>
+  <script>
+    //   var NewCoordsTop = $(window).height() ;
+    //   var NewCoordsLeft = $(window).width() ;
+    //   new NewCoords = {
+    //     top: NewCoordsTop,
+    //     left: newCoordsLeft
+    //   };
+    //     return NewCoords;
+    // });
+
+    $("div:last").offset({
+      top: $(window).height()-50,
+      left: $(window).width()-220
+    });
+  </script>
+
+</body>
+
+</html>
