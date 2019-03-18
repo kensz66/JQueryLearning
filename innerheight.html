@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>innerHeight demo</title>
+  <style>
+  div {
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid #666;
+    /* line-height: 100px; */
+    height:30px;
+    box-sizing: border-box;
+    /* display: block; */
+  }
+  </style>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<div>Hello</div>
+<div></div>
+<h2>innerHeight= padding-top   +   padding-bottom   +    height</h2>
+<h2>height一般要小于innerheigit</h2>
+<script>
+var div = $( "div:first" );
+$( "div:last" ).text( "innerHeight:" + div.innerHeight()+" height:"+div.height() );
+</script>
+
+</body>
+</html>
