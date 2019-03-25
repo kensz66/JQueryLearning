@@ -8,6 +8,9 @@ git add .  //添加文件夹所有文件
 提交文件到本地库
 git commit -m '版本说明的内容(必填)'
 
+让git永久记住github登录用户名和密码
+git config credential.helper store
+
 关联到远程库
 git remote add origin https://www.github.com/kensz66/JQueryLearning.git
 
